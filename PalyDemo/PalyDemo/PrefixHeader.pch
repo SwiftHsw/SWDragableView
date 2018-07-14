@@ -1,0 +1,56 @@
+//
+//  PrefixHeader.pch
+//  PalyDemo
+//
+//  Created by 黄世文 on 2018/7/13.
+//  Copyright © 2018年 mac_pro_s. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+/**
+ *  弱引用
+ */
+#define weakSelf(object)            __weak typeof(object) weakSelf = object
+
+#define UIDeviceScreenSize   [[UIScreen mainScreen] bounds].size
+#define UIDeviceScreenWidth  [[UIScreen mainScreen] bounds].size.width
+#define UIDeviceScreenHeight [[UIScreen mainScreen] bounds].size.height
+
+
+//iPhoneX适配
+#define iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+#define ATStatusBarHeight (iPhoneX ? 44 : 20)
+#define ATNavBarHeight (iPhoneX ? 88 : 64)
+#define ATSafeAreaBottomHeight (iPhoneX ? 34 : 0)
+#define ATTabbarHeight (iPhoneX ? 83 : 49)
+
+//颜色相关
+#define ATColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+#define randomColorValue arc4random_uniform(256)
+#define ATRandomColor [UIColor colorWithRed:(randomColorValue)/255.0 green:(randomColorValue)/255.0 blue:(randomColorValue)/255.0 alpha:1.0]
+
+
+#import "UIImage+Extend.h"
+#import "UIView+Geometry.h"
+#import "UIView+GestureRecognizer.h"
+#import "NSArray+Safe.h"
+
+
+#import "Masonry.h"
+#import "UIImageView+WebCache.h"
+#import "YYImage.h"
+#import "MBProgressHUD.h"
+#import "MJRefresh.h"
+
+#import "AFNetworking.h"
+
+
+
+
+
+
+#endif /* PrefixHeader_pch */
