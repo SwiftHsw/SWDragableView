@@ -64,7 +64,9 @@
          [weakSelf startPlayVideo];
      } loadStatus:^(ATAVPlayer *player, AVPlayerStatus status) {
          NSLog(@"AVPlayerStatus status:%ld",status);
-         
+         if (status == 2) {
+              [self promptMessage:@"加载失败，网络或者服务器出现问题"];
+         }
          if(self.delegate && [self.delegate respondsToSelector:@selector(videoDidPlaying)]){
              [self.delegate videoDidPlaying];
          }
