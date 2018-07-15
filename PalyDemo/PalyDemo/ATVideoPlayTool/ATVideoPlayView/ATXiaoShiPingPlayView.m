@@ -180,7 +180,7 @@
     
     UIButton *titleBtn = [[UIButton alloc]init];
     [titleBtn setTitle:@"双击可赞,点我弹出评论视图" forState:UIControlStateNormal];
-    [titleBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [titleBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.bottomBar addSubview:titleBtn];
     
     [titleBtn mas_updateConstraints:^(MASConstraintMaker *make) {

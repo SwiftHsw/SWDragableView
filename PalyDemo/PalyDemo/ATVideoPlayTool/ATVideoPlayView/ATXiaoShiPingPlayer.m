@@ -146,7 +146,7 @@
             UIImageView *view = [UIImageView new];
             view.userInteractionEnabled = NO ;
 //            /UIViewContentModeScaleAspectFit/
-            view.contentMode = UIViewContentModeScaleAspectFill;
+            view.contentMode = UIViewContentModeScaleAspectFit;
             view.layer.masksToBounds = YES ;
             view ;
         });

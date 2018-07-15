@@ -115,6 +115,8 @@ static float const ATPaddingNormal = 10.f;
             }else{
                 make.left.mas_equalTo(lastBtn.mas_right).mas_offset(5);
             }
+            
+            make.top.mas_offset(60);
         }];
         lastBtn = btn ;
     }
