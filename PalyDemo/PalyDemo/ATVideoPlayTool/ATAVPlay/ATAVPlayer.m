@@ -158,7 +158,16 @@
         [self.playerLayer removeFromSuperlayer];
         self.playerLayer = [AVPlayerLayer playerLayerWithPlayer:self.player];
         //设置模式
-        self.playerLayer.videoGravity = AVLayerVideoGravityResizeAspect;
+        self.playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
+        
+        /*
+         
+         1.保持纵横比；适合层范围内 =AVLayerVideoGravityResizeAspect
+         2.保持纵横比；填充层边界    = AVLayerVideoGravityResizeAspectFill
+         3.拉伸填充层边界   = AVLayerVideoGravityResize
+ 
+
+         */
         self.playerLayer.contentsScale = [UIScreen mainScreen].scale;
     }
     
@@ -516,9 +525,9 @@
 }
 
 - (NSString*)mediaUrl{
-    if(!_mediaUrl.length){
-        return @"";
-    }
+//    if(!_mediaUrl.length){
+//        return @"";
+//    }
     return _mediaUrl;
 }
 

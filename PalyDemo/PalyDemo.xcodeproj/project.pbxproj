@@ -120,6 +120,9 @@
 		302CF24320F9F76B0066F5EF /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 302CF22C20F9F76B0066F5EF /* UIScrollView+MJRefresh.m */; };
 		302CF24420F9F76B0066F5EF /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 302CF22E20F9F76B0066F5EF /* UIView+MJExtension.m */; };
 		302CF24520F9F76B0066F5EF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 302CF22F20F9F76B0066F5EF /* README.md */; };
+		3034D7C720FAE3A10086D477 /* designedByAppleInCalifornia.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3034D7C620FAE3A10086D477 /* designedByAppleInCalifornia.mp4 */; };
+		3034D7C920FAE80A0086D477 /* bgCorImage.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3034D7C820FAE80A0086D477 /* bgCorImage.jpeg */; };
+		3034D7CC20FAEA690086D477 /* UIView+ActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3034D7CA20FAEA690086D477 /* UIView+ActivityIndicatorView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -348,6 +351,10 @@
 		302CF22D20F9F76B0066F5EF /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		302CF22E20F9F76B0066F5EF /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
 		302CF22F20F9F76B0066F5EF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3034D7C620FAE3A10086D477 /* designedByAppleInCalifornia.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = designedByAppleInCalifornia.mp4; path = PalyDemo/designedByAppleInCalifornia.mp4; sourceTree = SOURCE_ROOT; };
+		3034D7C820FAE80A0086D477 /* bgCorImage.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bgCorImage.jpeg; sourceTree = "<group>"; };
+		3034D7CA20FAEA690086D477 /* UIView+ActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ActivityIndicatorView.m"; sourceTree = "<group>"; };
+		3034D7CB20FAEA690086D477 /* UIView+ActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ActivityIndicatorView.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -614,6 +621,8 @@
 		302CF0ED20F9C8A30066F5EF /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				3034D7CB20FAEA690086D477 /* UIView+ActivityIndicatorView.h */,
+				3034D7CA20FAEA690086D477 /* UIView+ActivityIndicatorView.m */,
 				302CF0F020F9C8A30066F5EF /* UIView+Border.h */,
 				302CF0F120F9C8A30066F5EF /* UIView+Border.m */,
 				302CF0F220F9C8A30066F5EF /* UIView+Geometry.h */,
@@ -656,6 +665,8 @@
 		302CF10F20F9D13B0066F5EF /* ATVideoPlayTool */ = {
 			isa = PBXGroup;
 			children = (
+				3034D7C820FAE80A0086D477 /* bgCorImage.jpeg */,
+				3034D7C620FAE3A10086D477 /* designedByAppleInCalifornia.mp4 */,
 				302CF0FA20F9C9150066F5EF /* ATRecognizeSimultaneousTableView */,
 				302CF04620F9C4F30066F5EF /* ATVideoPlayView */,
 				302CF0C520F9C6D40066F5EF /* ATDragableView */,
@@ -907,8 +918,10 @@
 				302CF19A20F9DAA80066F5EF /* yp_video_like@2x.png in Resources */,
 				302CF24520F9F76B0066F5EF /* README.md in Resources */,
 				302CF0DE20F9C7F60066F5EF /* README.md in Resources */,
+				3034D7C720FAE3A10086D477 /* designedByAppleInCalifornia.mp4 in Resources */,
 				302CF23F20F9F76B0066F5EF /* MJRefresh.bundle in Resources */,
 				302CF0DD20F9C7F60066F5EF /* LICENSE in Resources */,
+				3034D7C920FAE80A0086D477 /* bgCorImage.jpeg in Resources */,
 				302CF19B20F9DAA80066F5EF /* yp_video_like@3x.png in Resources */,
 				302CF02F20F9BA320066F5EF /* Main.storyboard in Resources */,
 			);
@@ -966,6 +979,7 @@
 				302CF0AD20F9C6220066F5EF /* SDImageCacheConfig.m in Sources */,
 				302CF23220F9F76B0066F5EF /* MJRefreshBackFooter.m in Sources */,
 				302CF18D20F9D54D0066F5EF /* NSString+MJExtension.m in Sources */,
+				3034D7CC20FAEA690086D477 /* UIView+ActivityIndicatorView.m in Sources */,
 				302CF23B20F9F76B0066F5EF /* MJRefreshBackStateFooter.m in Sources */,
 				302CF0B920F9C6220066F5EF /* SDWebImageTransition.m in Sources */,
 				302CF06C20F9C55F0066F5EF /* View+MASAdditions.m in Sources */,

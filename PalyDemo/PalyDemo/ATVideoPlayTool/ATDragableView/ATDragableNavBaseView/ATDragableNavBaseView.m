@@ -51,7 +51,7 @@
     
     self.navTitleView.contentOffsetY = self.navContentOffsetY;
     [self.navTitleView mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.dragContentView).priority(998);
+        make.top.mas_offset(30).priority(998);
         make.left.mas_equalTo(self.dragContentView).priority(998);
         make.width.mas_equalTo(self.dragContentView).priority(998);
         make.height.mas_equalTo(_navTitleHeight);

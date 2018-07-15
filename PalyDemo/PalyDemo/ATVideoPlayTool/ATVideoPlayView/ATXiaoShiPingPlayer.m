@@ -45,19 +45,20 @@
 - (void)startPlayVideo{
     
     [self destoryVideoPlayer];
-    
+            [self showActivityViewWithImage:@"liveroom_rotate_55x55_"];
     NSLog(@"加载中...");
+#warning self.netType  本地视频
     
     weakSelf(self);
     [[ATAVPlayer sharedInstance]initPlayInfoWithUrl:self.playUrl
                                           mediaType:ATMediaTypeVideo
-                                        networkType:self.netType
+                                        networkType:ATNetworkTypeNet
                                             process:^(ATAVPlayer *player,float progress)
      {
      }compelete:^(ATAVPlayer *player){
          NSLog(@"compelete");
           NSLog(@"加载中成功,关闭加载动画");
-         
+           [self hiddenActivity];
          [[ATAVPlayer sharedInstance].playerLayer removeFromSuperlayer];
          [[ATAVPlayer sharedInstance] releasePlayer];
          [weakSelf startPlayVideo];
@@ -74,10 +75,14 @@
      } seekComplete:^(ATAVPlayer *player,CGFloat prePos,CGFloat curtPos) {
      } buffering:^(ATAVPlayer *player) {
          NSLog(@"加载中");
+           [self showActivityViewWithImage:@"liveroom_rotate_55x55_"];
      } bufferFinish:^(ATAVPlayer *player) {
     NSLog(@"加载中成功,关闭加载动画");
+           [self hiddenActivity];
      } error:^(ATAVPlayer *player, NSError *error) {
        NSLog(@"加载中成功,关闭加载动画");
+         
+         [self hiddenActivity];
      }];
     
     [ATAVPlayer sharedInstance].playerLayer.frame = self.bounds;
@@ -138,7 +143,8 @@
         _corverView = ({
             UIImageView *view = [UIImageView new];
             view.userInteractionEnabled = NO ;
-            view.contentMode = UIViewContentModeScaleAspectFit;
+//            /UIViewContentModeScaleAspectFit/
+            view.contentMode = UIViewContentModeScaleAspectFill;
             view.layer.masksToBounds = YES ;
             view ;
         });

@@ -66,6 +66,18 @@
 
 - (void)viewWillAppear{
     [super viewWillAppear];
+    
+    [ViewController checkingNetworkResult:^(ATNetworkStatus status) {
+        if (status == ATNetworkStatusReachableViaWWAN) {
+            [self promptMessage:@"正在使用手机流量播放"];
+        }else if (status == ATNetworkStatusReachableViaWiFi){
+            [self promptMessage:@"正在使用WIFI播放"];
+        }else{
+            [self promptMessage:@"请检查网络"];
+        }
+ 
+    }];
+    
     [self initUI];
     [self refreshData];
     [self startAnimate];
@@ -118,8 +130,9 @@
     [super viewWillDisappear];
     
     [[UIApplication sharedApplication]setStatusBarHidden:NO withAnimation:NO];
-    [[UIApplication sharedApplication]setStatusBarStyle:self.barStyle];
+//    [[UIApplication sharedApplication]setStatusBarStyle:self.barStyle];
     
+      [[UIApplication sharedApplication]setStatusBarStyle:UIStatusBarStyleDefault];
     //关闭视频
     ATXiaoShiPingPlayer *videoView = [self.videoContainer viewWithTag:VideoCorverViewBaseTag + self.selIndex ];
     [videoView destoryVideoPlayer];
@@ -537,7 +550,7 @@
     if(!_bottomBar){
         _bottomBar = ({
             UIView *view = [[UIView alloc]init];
-            view.backgroundColor = [UIColor whiteColor];
+            view.backgroundColor = [UIColor clearColor];
 
             view ;
         });
